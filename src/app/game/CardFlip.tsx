@@ -46,9 +46,7 @@ export default function CardFlip(
         transition={{duration: 0.6, animationDirection: "normal"}}
         onAnimationComplete={()=> setIsAnimating(false)}
         >
-          <div className="flip-card-back w-[100%] h-[100%] bg-cover border-[1px] text-yellow-500 rounded-lg p-4 flex items-center justify-center bg-red-800"
-          style={backImage?{backgroundImage:`url(${backImage})`}:null}
-          >
+          <div className="flip-card-back w-[100%] h-[100%] bg-cover border-[1px] text-yellow-500 rounded-lg p-4 flex items-center justify-center bg-red-800">
             <div className="absolute h-full w-full bg-slate-950 z-0">
               <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(250,30,30,0.15),rgba(255,255,255,0))]"></div>
               <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[147px] w-[112px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,30,27,.15),rgba(255,255,255,0))]"></div>

@@ -70,7 +70,7 @@ export default function Game({memoTest,backImage}:{memoTest : MemoTest, backImag
       </div>
       {matchedPairs === memoTest.images.length / 2 && (
         <div className="h-[80px] text-center text-2xl flex justify-center items-center">
-          <p>Congratulations! You've completed the memo test.</p>
+          <p>Congratulations! You have completed the memo test.</p>
 
         </div>
       )}
