@@ -50,3 +50,10 @@ body {
 .flip-card-front {
   transform: rotateY(180deg);
 }
+
+.text-shadow-outline {
+  text-shadow: -3px -3px 0 #000,  
+                3px -3px 0 #000,
+                3px 3px 0 #000,
+                7px 3px 0 #000;
+}

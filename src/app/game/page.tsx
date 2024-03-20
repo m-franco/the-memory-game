@@ -3,20 +3,24 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { shuffle } from 'lodash';
 import Game from "./game";
+import { GameSessionProvider } from "@/context/gameSessionContext";
 
 export default function Page() {
 
   const [memoTest, setMemoTest] = useState({
     id: 1,
     name: "Memory",
-    images: selectRandomItems(siteConfig.stickers2,15),
+    images: selectRandomItems(siteConfig.stickers,15),
   })
 
-  return (<div className="absolute inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-        <div className="flex justify-around flex-wrap  h-full w-full">
-          <Game memoTest={memoTest} backImage={null}/>
-        </div>
-  </div>
+  return (
+    <GameSessionProvider>
+      <div className="absolute inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+          <div className="flex justify-around flex-wrap  h-full w-full">
+            <Game memoTest={memoTest}/>
+          </div>
+      </div>
+    </GameSessionProvider>
   );
 }
 

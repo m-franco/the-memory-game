@@ -2,11 +2,10 @@ import {useState, useEffect} from "react"
 import {motion} from "framer-motion"
 
 export default function CardFlip(
-  {item, width,  height, backImage, onClick, flippedCards, matchedCards}:
+  {item, width,  height, onClick, flippedCards, matchedCards}:
   { item: any,
     width: number, 
     height: number,
-    backImage: any,
     onClick: () => void,
     flippedCards: number[],
     matchedCards: number[],  
@@ -51,7 +50,7 @@ export default function CardFlip(
               <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(250,30,30,0.15),rgba(255,255,255,0))]"></div>
               <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[147px] w-[112px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,30,27,.15),rgba(255,255,255,0))]"></div>
              </div>
-            <h1 className="text-5xl font-bold self-center z-10">{item.id}</h1>
+            <h1 className="text-5xl font-bold self-center z-10 text-shadow-outline">{item.id}</h1>
           </div>
           <div className="flip-card-front w-[100%] h-[100%] bg-cover border-[1px] text text-green-700 rounded-lg p-4"
           style={{backgroundImage:`url(${item.path})`}}
